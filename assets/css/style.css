@@ -8,8 +8,9 @@
 }
 .letterBox {
     float: left;
-    width: 50px;
-    padding: 10px;
+    width: 40px;
+    padding: 80px 0 30px 0;
+    font-size: 30px;
 }
 #instructions {
     margin: 0 auto;
@@ -17,18 +18,23 @@
 }
 
 #answerBoard {
-    margin: 200px 200px 0 500px;
+    margin: 80px 200px 0 480px;
     font-size: 12px;
+    height: 200px;
+    width: 500px;
 }
 
 #winStatus {
-    margin: 100px auto 0 auto;
+    margin: 10px auto 0 650px;
     font-size:30px;
     clear: left;
+    width: 400px;
+    height: 100px;
+    color: white;
 }
 
 #guessesLeft {
-    margin: 320px 0 0 650px;
+    margin: 50px 0 0 650px;
     clear: both;
     color: white;
 }

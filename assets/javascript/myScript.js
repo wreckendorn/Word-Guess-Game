@@ -19,7 +19,7 @@
             }
 // adds a ____ as a placeholder for each letter that exists, and not a letter more!
             while (j<= director.length) {
-                 document.getElementById("box" + j).innerHTML = "_____";
+                 document.getElementById("box" + j).innerHTML = "__";
                  j = j + 1;
              }
 
@@ -67,6 +67,6 @@
         } 
 // if they run out of guesses, displays "You Suck"
         if (numGuess == 0) {
-            document.getElementById("winStatus").innerHTML = "You Suck";
+            document.getElementById("winStatus").innerHTML = "You Suck!";
         }
      }  
