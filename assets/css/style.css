@@ -1,0 +1,42 @@
+
+.container {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 18px;
+    background: url("../images/movietheater.jpeg") no-repeat center;
+    height: 800px;
+}
+.letterBox {
+    float: left;
+    width: 50px;
+    padding: 10px;
+}
+#instructions {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+#answerBoard {
+    margin: 200px 200px 0 500px;
+    font-size: 12px;
+}
+
+#winStatus {
+    margin: 100px auto 0 auto;
+    font-size:30px;
+    clear: left;
+}
+
+#guessesLeft {
+    margin: 320px 0 0 650px;
+    clear: both;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+body {
+    background: black;
+}

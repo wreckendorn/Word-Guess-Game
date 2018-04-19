@@ -2,40 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <style>
-            .container {
-                font-family: 'Times New Roman', Times, serif;
-                color: black;
-            }
-            .letterBox {
-                float: left;
-                width: 100px;
-            }
-            #instructions {
-                margin: 0 auto;
-                max-width: 700px;
-            }
-        
-            #answerBoard {
-                margin: 100px auto;
-            }
-
-            #winStatus {
-                margin: 100px auto 0 auto;
-                font-size:30px;
-                clear: left;
-            }
-            </style>     
+    <title>Word Guess Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">    
 </head>
 
 <body>
      <div class="container">
                 <div id="instructions">
-                    <p>To play this game, you simply type in one letter on your keyboard.</p> 
-                    <p>If the letter is included in the mystery word, that letter is revealed.  </p>
-                    <p>Keep guessing until you have revealed all the letters. </p>
-                    <p>When you are ready, press the letter you want for your guess.</p>
+                    <p>To play this game, you simply type in one letter on your keyboard.
+                    If the letter is included in the mystery word, that letter is revealed.
+                    Keep guessing until you have revealed all the letters.
+                    When you are ready, press the letter you want for your guess.</p>
                 </div>
                 <div id="answerBoard">
                     <div id="box1" class="letterBox"></div>
@@ -51,91 +29,9 @@
                 </div>
                 <div id="guessesLeft">Guesses Left: 4</div>
                 <div id="winStatus"></div>
-            </div>
+    </div>
 
-    <script>
-// function for determining if the user's guess matches.  if it does, it prints that letter out.
-
-
-
-
-
-    // Determines which key was pressed.
-  //     var userGuess = (event.key);    
-
-// document.onkeyup = directorGenerated(); 
-//THIS SECTION WORKS
-        // array that holds all of the directors 
- //       function directorGenerated() {
-        var directorBankArray = ["spielberg","lucas","aronofsky", "nolan", "jonze","kubrick","allen","lee","tarantino","scorsese","hughes","lynch","hitchcock","anderson","fincher","cameron","coppola","scott","burton","lee","jackson","stone","howard","carpenter","fellini","soderbergh","herzog"];
-        // var that holds the choice the computer randomly made from the directorBankArray
-        var director = directorBankArray[Math.floor(Math.random() * directorBankArray.length)];
-        console.log(director);
-        var letterArray = [ ];
-        var numGuess = 4;
-        var i = 0;
-        var j = 1;
-  
-
-//conditional statement for assigning each letter to an index in the array.  while the number of letters left in the array does not equal 0
-            while (i<= director.length) {
-                letterArray[i] = director.charAt(director.length - director.length + i);
-                 console.log(letterArray[i]);   
-                 i = i + 1;
-            }
-// adds a ____ as a placeholder for each letter that exists, and not a letter more!
-            while (j<= director.length) {
-                 document.getElementById("box" + j).innerHTML = "________";
-                 j = j + 1;
-             }
-
-            document.onkeyup = function(event) {
-            var userGuess = event.key;
-            var a = 0;
-    //    }
-
-            
-          if (userGuess === letterArray[0]) {
-            document.getElementById("box1").innerHTML = userGuess;
-            a = 1;
-        } if (userGuess === letterArray[1]) {
-           document.getElementById("box2").innerHTML = userGuess;
-           a = 1;
-        } if (userGuess === letterArray[2]) { 
-            document.getElementById("box3").innerHTML = userGuess;
-            a = 1;
-        } if (userGuess === letterArray[3]) {
-            document.getElementById("box4").innerHTML = userGuess;
-            a = 1;
-        } if (userGuess === letterArray[4]) {
-            document.getElementById("box5").innerHTML = userGuess;
-            a = 1;
-        } if (userGuess === letterArray[5]) {
-            document.getElementById("box6").innerHTML = userGuess;
-            a = 1;
-        } if (userGuess === letterArray[6]) {
-           document.getElementById("box7").innerHTML = userGuess;
-           a = 1;
-        } if (userGuess === letterArray[7]) {
-            document.getElementById("box8").innerHTML = userGuess;
-            a = 1;
-        } if (userGuess === letterArray[8]) {
-            document.getElementById("box9").innerHTML = userGuess;
-            a = 1;
-        } if (userGuess === letterArray[9]) {
-            document.getElementById("box10").innerHTML = userGuess;
-            a = 1;
-        } else if (a === 0) {
-            numGuess = numGuess - 1;
-            document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + numGuess;
-        } 
-        
-        if (numGuess == 0) {
-            document.getElementById("winStatus").innerHTML = "You Suck";
-        }
-     }  
-        </script>
-
+<script src="assets/javascript/myScript.js"></script>
         
 </body>
 
