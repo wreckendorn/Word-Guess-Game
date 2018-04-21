@@ -1,4 +1,5 @@
 
+        document.onkeyup = function(event) {
 //THIS SECTION WORKS
         // array that holds all of the directors 
         var directorBankArray = ["spielberg","lucas","aronofsky", "nolan", "jonze","kubrick","allen","lee","tarantino","scorsese","hughes","lynch","hitchcock","anderson","fincher","cameron","coppola","scott","burton","lee","jackson","stone","howard","carpenter","fellini","soderbergh","herzog"];
@@ -7,6 +8,7 @@
         console.log(director);
         var letterArray = [ ];
         var numGuess = 4;
+        var missedLetters = [ ];
         var i = 0;
         var j = 1;
   
@@ -63,10 +65,12 @@
 // decreases number of guesses left and displays it
         } else if (a === 0) {
             numGuess = numGuess - 1;
-            document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + numGuess;
+            missedLetters.push(userGuess);
+            document.getElementById("guessesLeft").innerHTML = missedLetters.toString() + "<br />" + "Guesses Left: " + numGuess;
         } 
 // if they run out of guesses, displays "You Suck"
         if (numGuess == 0) {
-            document.getElementById("winStatus").innerHTML = "You Suck!";
+            document.getElementById("guessesLeft").innerHTML = "You Suck!";
         }
      }  
+}

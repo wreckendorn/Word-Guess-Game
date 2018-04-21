@@ -39,6 +39,11 @@
     color: white;
 }
 
+#wrongLetters {
+    margin: 100px 0 0 650px;
+    color: white;
+}
+
 p {
     color: white;
 }
